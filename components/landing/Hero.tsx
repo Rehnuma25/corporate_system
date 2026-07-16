@@ -16,11 +16,11 @@ export default function Hero() {
      <section className="relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
 
       {/* Background Blur */}
-      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-blue-400/20 blur-[120px]" />
+      <div className="absolute -top-40 -left-40 w-[500px] h-[500px] rounded-full bg-blue-400/20 blur-[60px]" />
 
-      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-cyan-300/20 blur-[120px]" />
+      <div className="absolute bottom-0 right-0 w-[450px] h-[450px] rounded-full bg-cyan-300/20 blur-[60px]" />
 
-      <div className="absolute top-40 right-40 w-[250px] h-[250px] rounded-full bg-indigo-400/10 blur-[100px]" />
+      <div className="absolute top-40 right-40 w-[250px] h-[250px] rounded-full bg-indigo-400/10 blur-[60px]" />
 
       {/* Grid */}
       <div
@@ -296,7 +296,7 @@ export default function Hero() {
               transition={{
                 duration: 0.4,
               }}
-              className="relative w-[520px] rounded-[32px] border border-slate-200 bg-white/90 backdrop-blur-xl shadow-[0_30px_90px_rgba(15,23,42,0.12)] p-8"
+              className="relative w-[520px] rounded-[32px] border border-slate-200 bg-white shadow-2xl"
             >
 
               {/* Header */}
