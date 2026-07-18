@@ -57,7 +57,7 @@ export default function Hero() {
               <Sparkles className="w-4 h-4 text-blue-600" />
 
               <span className="text-sm font-semibold text-slate-700">
-                Enterprise AI Platform
+                Corporate AI Platform
               </span>
 
             </motion.div>
@@ -198,7 +198,7 @@ export default function Hero() {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.3 }}
-            className="relative flex justify-center"
+            className="relative flex justify-center items-center px-8 lg:px-12"
           >
 
             {/* Background Glow */}
@@ -215,7 +215,7 @@ export default function Hero() {
                 repeat: Infinity,
                 duration: 4,
               }}
-              className="absolute left-20 top-10 z-20"
+              className="absolute -left-6 top-8 z-30 hidden md:block"
             >
 
               <div className="rounded-2xl bg-white shadow-xl border border-slate-200 px-6 py-4">
@@ -256,7 +256,7 @@ export default function Hero() {
                 repeat: Infinity,
                 duration: 5,
               }}
-              className="absolute right-0 bottom-20 z-20"
+              className="absolute -right-6 bottom-16 z-30 hidden md:block"
             >
 
               <div className="rounded-2xl bg-white shadow-xl border border-slate-200 px-5 py-4">
@@ -296,12 +296,12 @@ export default function Hero() {
               transition={{
                 duration: 0.4,
               }}
-              className="relative w-[520px] rounded-[32px] border border-slate-200 bg-white shadow-2xl"
+              className="relative z-10 w-full max-w-[520px] rounded-[32px] border border-slate-200 bg-white shadow-2xl p-8"
             >
 
               {/* Header */}
 
-              <div className="flex items-center justify-between">
+              <div className="flex items-start justify-between gap-4">
 
                 <div>
 
