@@ -2,190 +2,508 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  LayoutDashboard,
+  FolderOpen,
+  Bot,
+  Shield,
+  Cpu,
+  BookOpen,
+} from "lucide-react";
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const [platformOpen, setPlatformOpen] = useState(false);
+  const [solutionOpen, setSolutionOpen] = useState(false);
+  const [technologyOpen, setTechnologyOpen] = useState(false);
+  const [resourceOpen, setResourceOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md shadow-sm border-b">
-      <div className="max-w-7xl mx-auto h-20 px-8 flex items-center justify-between">
+    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-slate-200">
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-3">
+      <div className="max-w-7xl mx-auto h-24 px-6 flex items-center justify-between">
 
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold text-xl">
-            DIS
+        {/* ================= Logo ================= */}
+
+        <Link
+          href="/"
+          className="flex items-center gap-4"
+        >
+
+          <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center shadow-lg">
+
+            <span className="text-white text-2xl font-bold">
+              DIS
+            </span>
+
           </div>
 
           <div>
-            <h2 className="font-bold text-xl text-slate-900">
+
+            <h2 className="text-1.5xl font-bold text-slate-600">
               Document Intelligence System
             </h2>
 
-            <p className="text-xs text-gray-500">
-              Document Management Platform
-            </p>
           </div>
 
         </Link>
 
-        {/* Desktop Menu */}
+        {/* ================= Desktop Menu ================= */}
 
-        <nav className="hidden lg:flex gap-8 font-medium text-gray-700">
+        <nav className="hidden lg:flex items-center gap-10">
 
           <a
             href="#home"
-            className="hover:text-blue-600 transition"
+            className="font-medium text-slate-700 hover:text-blue-600 transition"
           >
             Home
           </a>
 
-          <a
-            href="#companies"
-            className="hover:text-blue-600 transition"
+          {/* ================= Platform ================= */}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setPlatformOpen(true)}
+            onMouseLeave={() => setPlatformOpen(false)}
           >
-            Companies
-          </a>
 
-          <div className="relative group">
+            <button className="flex items-center gap-1 font-medium text-slate-700 hover:text-blue-600">
 
-            <button className="hover:text-blue-600 transition">
-              Features ▼
+              Platform
+
+              <ChevronDown size={18} />
+
             </button>
 
-            <div
-              className="absolute left-0 top-full mt-2 hidden group-hover:block
-              bg-white rounded-xl shadow-xl border w-64 p-4"
-            >
+            {platformOpen && (
 
-              <a
-                href="#features"
-                className="block py-2 hover:text-blue-600"
-              >
-                Chatbot
-              </a>
+              <div className="absolute top-10 left-0 w-80 rounded-2xl bg-white border border-slate-200 shadow-2xl p-5">
 
-              <a
-                href="#features"
-                className="block py-2 hover:text-blue-600"
-              >
-                Knowledge Workspace
-              </a>
+                <div className="space-y-4">
 
-              <a
-                href="#features"
-                className="block py-2 hover:text-blue-600"
-              >
-                Voice Assistant
-              </a>
+                  <a
+                    href="#dashboard"
+                    className="flex gap-4 rounded-xl p-3 hover:bg-slate-100 transition"
+                  >
 
-              <a
-                href="#features"
-                className="block py-2 hover:text-blue-600"
-              >
-                Image Understanding
-              </a>
+                    <LayoutDashboard
+                      className="text-blue-600"
+                    />
 
-            </div>
+                    <div>
+
+                      <h4 className="font-semibold">
+
+                        Enterprise Dashboard
+
+                      </h4>
+
+                      <p className="text-sm text-slate-500">
+
+                        Manage every workspace from one place.
+
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                  <a
+                    href="#knowledge"
+                    className="flex gap-4 rounded-xl p-3 hover:bg-slate-100 transition"
+                  >
+
+                    <FolderOpen
+                      className="text-indigo-600"
+                    />
+
+                    <div>
+
+                      <h4 className="font-semibold">
+
+                        Knowledge Workspace
+
+                      </h4>
+
+                      <p className="text-sm text-slate-500">
+
+                        Organize enterprise documents securely.
+
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                  <a
+                    href="#aiworkspace"
+                    className="flex gap-4 rounded-xl p-3 hover:bg-slate-100 transition"
+                  >
+
+                    <Bot
+                      className="text-purple-600"
+                    />
+
+                    <div>
+
+                      <h4 className="font-semibold">
+
+                        AI Workspace
+
+                      </h4>
+
+                      <p className="text-sm text-slate-500">
+
+                        Chat with enterprise knowledge using AI.
+
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                  <a
+                    href="#security"
+                    className="flex gap-4 rounded-xl p-3 hover:bg-slate-100 transition"
+                  >
+
+                    <Shield
+                      className="text-emerald-600"
+                    />
+
+                    <div>
+
+                      <h4 className="font-semibold">
+
+                        Security Center
+
+                      </h4>
+
+                      <p className="text-sm text-slate-500">
+
+                        Enterprise protection & compliance.
+
+                      </p>
+
+                    </div>
+
+                  </a>
+                
+                                  <a
+                    href="#analytics"
+                    className="flex gap-4 rounded-xl p-3 hover:bg-slate-100 transition"
+                  >
+                    <Cpu className="text-cyan-600" />
+
+                    <div>
+                      <h4 className="font-semibold">
+                        Analytics
+                      </h4>
+
+                      <p className="text-sm text-slate-500">
+                        Monitor enterprise insights and AI performance.
+                      </p>
+                    </div>
+                  </a>
+
+                </div>
+
+              </div>
+
+            )}
+
+          </div>
+
+          {/* ================= Solutions ================= */}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setSolutionOpen(true)}
+            onMouseLeave={() => setSolutionOpen(false)}
+          >
+
+            <button className="flex items-center gap-1 font-medium text-slate-700 hover:text-blue-600">
+
+              Solutions
+
+              <ChevronDown size={18} />
+
+            </button>
+
+            {solutionOpen && (
+
+              <div className="absolute top-10 left-0 w-80 rounded-2xl bg-white border border-slate-200 shadow-2xl p-5">
+
+                <div className="space-y-4">
+
+                  <a
+                    href="#document-intelligence"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    <h4 className="font-semibold">
+                      Document Intelligence
+                    </h4>
+
+                    <p className="text-sm text-slate-500">
+                      AI powered document understanding.
+                    </p>
+                  </a>
+
+                  <a
+                    href="#enterprise-search"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    <h4 className="font-semibold">
+                      Enterprise Search
+                    </h4>
+
+                    <p className="text-sm text-slate-500">
+                      Search thousands of documents instantly.
+                    </p>
+                  </a>
+
+                  <a
+                    href="#workflow"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    <h4 className="font-semibold">
+                      Workflow Automation
+                    </h4>
+
+                    <p className="text-sm text-slate-500">
+                      Automate enterprise operations using AI.
+                    </p>
+                  </a>
+
+                  <a
+                    href="#multi-agent"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    <h4 className="font-semibold">
+                      Multi-Agent AI
+                    </h4>
+
+                    <p className="text-sm text-slate-500">
+                      Intelligent collaboration between AI agents.
+                    </p>
+                  </a>
+
+                </div>
+
+              </div>
+
+            )}
+
+          </div>
+
+          {/* ================= Technology ================= */}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setTechnologyOpen(true)}
+            onMouseLeave={() => setTechnologyOpen(false)}
+          >
+
+            <button className="flex items-center gap-1 font-medium text-slate-700 hover:text-blue-600">
+
+              Technology
+
+              <ChevronDown size={18} />
+
+            </button>
+
+            {technologyOpen && (
+
+              <div className="absolute top-10 left-0 w-80 rounded-2xl bg-white border border-slate-200 shadow-2xl p-5">
+
+                <div className="space-y-4">
+
+                  <a
+                    href="#technology"
+                    className="flex gap-4 rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    <BookOpen className="text-indigo-600" />
+
+                    <div>
+
+                      <h4 className="font-semibold">
+                        Modern Stack
+                      </h4>
+
+                      <p className="text-sm text-slate-500">
+                        Next.js • FastAPI • ChromaDB • RAG
+                      </p>
+
+                    </div>
+
+                  </a>
+
+                  <a
+                    href="#technology"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    LLM Integration
+                  </a>
+
+                  <a
+                    href="#technology"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    Enterprise Security
+                  </a>
+
+                  <a
+                    href="#technology"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    AI Infrastructure
+                  </a>
+
+                </div>
+
+              </div>
+
+            )}
+
+          </div>
+
+                    {/* ================= Resources ================= */}
+
+          <div
+            className="relative"
+            onMouseEnter={() => setResourceOpen(true)}
+            onMouseLeave={() => setResourceOpen(false)}
+          >
+            <button className="flex items-center gap-1 font-medium text-slate-700 hover:text-blue-600">
+              Resources
+              <ChevronDown size={18} />
+            </button>
+
+            {resourceOpen && (
+              <div className="absolute top-10 left-0 w-80 rounded-2xl bg-white border border-slate-200 shadow-2xl p-5">
+
+                <div className="space-y-4">
+
+                  <a
+                    href="#features"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    Documentation
+                  </a>
+
+                  <a
+                    href="#workflow"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    Workflow
+                  </a>
+
+                  <a
+                    href="#technology"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    Developer Guide
+                  </a>
+
+                  <a
+                    href="#faq"
+                    className="block rounded-xl p-3 hover:bg-slate-100"
+                  >
+                    FAQs
+                  </a>
+
+                </div>
+
+              </div>
+            )}
 
           </div>
 
           <a
-            href="#security"
-            className="hover:text-blue-600 transition"
-          >
-            Security
-          </a>
-
-          <a
             href="#contact"
-            className="hover:text-blue-600 transition"
+             className="mr-10 font-medium text-slate-700 hover:text-blue-600 transition"
           >
             Contact
           </a>
 
         </nav>
 
-        {/* Right Side */}
+        {/* ================= Right Buttons ================= */}
 
-        <div className="hidden lg:flex gap-4">
+        <div className="hidden lg:flex items-center gap-8">
 
           <Link
             href="/login"
-            className="px-5 py-2 border border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50 transition"
+            className="px-6 py-3 rounded-xl border border-blue-600 text-blue-600 hover:bg-blue-50 transition"
           >
             Login
           </Link>
 
-          <button className="px-5 py-2 rounded-lg text-white bg-gradient-to-r from-blue-600 to-purple-600 hover:opacity-90">
+          <Link
+            href="/login"
+            className="px-7 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold hover:scale-105 transition shadow-lg"
+          >
             Get Started
-          </button>
+          </Link>
 
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* ================= Mobile Menu Button ================= */}
 
         <button
-          className="lg:hidden text-2xl"
-          onClick={() => setOpen(!open)}
+          onClick={() => setMobileOpen(!mobileOpen)}
+          className="lg:hidden"
         >
-          ☰
+          {mobileOpen ? (
+            <X className="w-8 h-8" />
+          ) : (
+            <Menu className="w-8 h-8" />
+          )}
         </button>
 
       </div>
 
-      {/* Mobile Menu */}
+      {/* ================= Mobile Menu ================= */}
 
-      {open && (
+      {mobileOpen && (
 
         <div className="lg:hidden bg-white border-t">
 
-          <a
-            href="#home"
-            className="block p-4 hover:bg-gray-100"
-          >
-            Home
-          </a>
+          <div className="flex flex-col px-6 py-6 space-y-5">
 
-          <a
-            href="#companies"
-            className="block p-4 hover:bg-gray-100"
-          >
-            Companies
-          </a>
+            <a href="#home">Home</a>
 
-          <a
-            href="#features"
-            className="block p-4 hover:bg-gray-100"
-          >
-            Features
-          </a>
+            <a href="#platform">Platform</a>
 
-          <a
-            href="#security"
-            className="block p-4 hover:bg-gray-100"
-          >
-            Security
-          </a>
+            <a href="#solutions">Solutions</a>
 
-          <a
-            href="#contact"
-            className="block p-4 hover:bg-gray-100"
-          >
-            Contact
-          </a>
+            <a href="#technology">Technology</a>
 
-          <Link
-            href="/login"
-            className="block p-4 hover:bg-gray-100"
-          >
-            Login
-          </Link>
+            <a href="#resources">Resources</a>
+
+            <a href="#pricing">Pricing</a>
+
+            <a href="#contact">Contact</a>
+
+            <Link
+              href="/login"
+              className="mt-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 py-3 text-center text-white font-semibold"
+            >
+              Login / Get Started
+            </Link>
+
+          </div>
 
         </div>
 
       )}
 
     </header>
+
   );
+
 }

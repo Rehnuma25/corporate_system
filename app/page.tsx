@@ -1,46 +1,47 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
-import Companies from "@/components/landing/Companies";
 import Features from "@/components/landing/Features";
-import Security from "@/components/landing/Security";
-import Footer from "@/components/landing/Footer";
+import Workflow from "@/components/landing/Workflow";
+import Technology from "@/components/landing/Technology";
 import Reward from "@/components/landing/reward";
+import Security from "@/components/landing/Security";
+import CTA from "@/components/landing/CTA";
+import Footer from "@/components/landing/Footer";
 
-export default function Page1() {
+export default function Home() {
   return (
-    <main className="bg-slate-50">
-      {/* Navbar */}
+    <main className="bg-[#07111F] overflow-x-hidden">
       <Navbar />
 
-      {/* Hero */}
       <section id="home">
         <Hero />
       </section>
 
-      {/* Trusted Companies */}
-      <section id="companies">
-        <Companies />
-      </section>
-
-      {/* Features */}
       <section id="features">
         <Features />
       </section>
 
-      {/* Reward */}
+      <section id="workflow">
+        <Workflow />
+      </section>
+
+      <section id="technology">
+        <Technology />
+      </section>
+
       <section id="reward">
         <Reward />
       </section>
 
-      {/* Security */}
       <section id="security">
         <Security />
       </section>
 
-      {/* Footer */}
-      <section id="contact">
-        <Footer />
+      <section id="cta">
+        <CTA />
       </section>
+
+      <Footer />
     </main>
   );
 }
