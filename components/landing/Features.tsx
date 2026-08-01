@@ -1,6 +1,5 @@
 import {
   ShieldCheck,
-  BrainCircuit,
   FileText,
   Search,
   Database,
@@ -9,6 +8,7 @@ import {
   Image,
   BarChart3,
   Users,
+  FileSearch,
   Workflow,
   Globe,
 } from "lucide-react";
@@ -16,11 +16,11 @@ import Link from "next/link";
 
 const features = [
   {
-    title: "AI Document Chat",
+    title: "Document Chat",
     desc: "Ask questions from PDFs, DOCX, TXT and receive accurate answers with citations.",
-    icon: BrainCircuit,
+    icon: FileSearch,
     color: "from-blue-500 to-cyan-500",
-    link: "/feature/ai-document-chat",
+    link: "/feature/document-chat",
   },
   {
     title: "Knowledge Workspace",
@@ -31,25 +31,25 @@ const features = [
   },
   {
     title: "Semantic Search",
-    desc: "Retrieve relevant information instantly using AI vector search.",
+    desc: "Retrieve relevant information instantly using vector search.",
     icon: Search,
     color: "from-orange-500 to-red-500",
     link: "/feature/semantic-search",
   },
   {
     title: "Vector Database",
-    desc: "Powered by ChromaDB for enterprise document retrieval.",
+    desc: "Powered by ChromaDB for corporate document retrieval.",
     icon: Database,
     color: "from-green-500 to-emerald-500",
     link: "/feature/vector-database" ,
   },
   {
-    title: "Voice_Image_folder",
+    title: "Voice_Image_part",
     desc: "Speak naturally and receive AI-generated answers instantly. Also, Upload images and extract insights using Vision AI. ",
     icon: Image,
     icon1: Mic ,
     color: "from-pink-500 to-rose-500",
-    link: "/feature/Voice_Image_folder" ,
+    link: "/feature/Voice_Image_part" ,
   },
   {
     title: "Analytics Dashboard",
@@ -76,7 +76,7 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-slate-50 py-24">
+    <section className="bg-blue-500 pt-24 pb-36">
 
       <div className="max-w-7xl mx-auto px-6">
 
@@ -92,7 +92,7 @@ export default function Features() {
             Everything You Need In One Platform
           </h2>
 
-          <p className="mt-5 text-lg text-gray-500 max-w-3xl mx-auto">
+            <p className="mt-5 text-lg text-slate-100 max-w-3xl mx-auto">
             Our Intelligence platform combines document intelligence,
             corporately security, advanced search, voice interaction,
             analytics and workflow automation into one unified system.
@@ -138,7 +138,7 @@ export default function Features() {
 
                 <Link
                      href={item.link}
-                          className="mt-8 inline-block text-blue-600 font-semibold group-hover:translate-x-2 transition"
+                          className="mt-8 inline-flex items-center gap-2 rounded-xl border-2 border-blue-600 bg-white px-6 py-3 font-semibold text-blue-600 transition-all duration-300 hover:-translate-y-1 hover:bg-blue-600 hover:text-white hover:shadow-xl"
                            >
                           Learn More →
                 </Link>

@@ -328,7 +328,7 @@ export default function RoleManagement() {
 
             <h2 className="mt-6 text-5xl font-bold text-slate-900">
 
-              Personal Workspace
+              User Workspace
 
             </h2>
 
@@ -367,8 +367,6 @@ export default function RoleManagement() {
 
               <div className="rounded-3xl bg-gradient-to-br from-green-500 to-emerald-600 p-8 text-white">
 
-                <Users size={70} />
-
                 <h2 className="mt-6 text-3xl font-bold">
 
                   User Dashboard
@@ -377,7 +375,7 @@ export default function RoleManagement() {
 
                 <p className="mt-4 text-green-100">
 
-                   personal workspace with document
+                   User workspace with document
                   management and conversation history.
 
                 </p>
