@@ -12,6 +12,7 @@ import {
   Workflow,
   Globe,
 } from "lucide-react";
+import Link from "next/link";
 
 const features = [
   {
@@ -19,72 +20,57 @@ const features = [
     desc: "Ask questions from PDFs, DOCX, TXT and receive accurate answers with citations.",
     icon: BrainCircuit,
     color: "from-blue-500 to-cyan-500",
+    link: "/feature/ai-document-chat",
   },
   {
     title: "Knowledge Workspace",
     desc: "Upload, organize and manage enterprise documents securely.",
     icon: FileText,
     color: "from-purple-500 to-pink-500",
+    link: "/feature/knowledge-workspace",
   },
   {
     title: "Semantic Search",
     desc: "Retrieve relevant information instantly using AI vector search.",
     icon: Search,
     color: "from-orange-500 to-red-500",
+    link: "/feature/semantic-search",
   },
   {
     title: "Vector Database",
     desc: "Powered by ChromaDB for enterprise document retrieval.",
     icon: Database,
     color: "from-green-500 to-emerald-500",
+    link: "/feature/vector-database" ,
   },
   {
-    title: "Enterprise Security",
-    desc: "Role-Based & Attribute-Based Access Control with audit logs.",
-    icon: ShieldCheck,
-    color: "from-indigo-500 to-blue-600",
-  },
-  {
-    title: "Voice Assistant",
-    desc: "Speak naturally and receive AI-generated answers instantly.",
-    icon: Mic,
-    color: "from-pink-500 to-rose-500",
-  },
-  {
-    title: "Image Understanding",
-    desc: "Upload images and extract insights using Vision AI.",
+    title: "Voice_Image_folder",
+    desc: "Speak naturally and receive AI-generated answers instantly. Also, Upload images and extract insights using Vision AI. ",
     icon: Image,
-    color: "from-yellow-500 to-orange-500",
+    icon1: Mic ,
+    color: "from-pink-500 to-rose-500",
+    link: "/feature/Voice_Image_folder" ,
   },
   {
     title: "Analytics Dashboard",
     desc: "Monitor usage, threats, uploads and AI performance.",
     icon: BarChart3,
     color: "from-sky-500 to-blue-500",
+    link: "/feature/Analytics-Dashboard" ,
   },
   {
     title: "Role Management",
     desc: "Separate dashboards for Admin, Manager and Employee.",
     icon: Users,
     color: "from-cyan-500 to-indigo-500",
-  },
-  {
-    title: "Workflow Automation",
-    desc: "Automate document processing and enterprise workflows.",
-    icon: Workflow,
-    color: "from-violet-500 to-purple-600",
-  },
-  {
-    title: "Secure Access",
-    desc: "Enterprise-grade authentication, encryption and JWT security.",
-    icon: Lock,
-    color: "from-emerald-500 to-teal-600",
+    link: "/feature/Role-Management",
   },
   {
     title: "Global Collaboration",
     desc: "Access documents securely from anywhere in the world.",
     icon: Globe,
     color: "from-blue-500 to-indigo-700",
+    link: "/feature/global-collaboration",
   },
 ];
 
@@ -150,13 +136,12 @@ export default function Features() {
 
                 </p>
 
-                <button
-                  className="mt-8 text-blue-600 font-semibold group-hover:translate-x-2 transition"
-                >
-
-                  Learn More →
-
-                </button>
+                <Link
+                     href={item.link}
+                          className="mt-8 inline-block text-blue-600 font-semibold group-hover:translate-x-2 transition"
+                           >
+                          Learn More →
+                </Link>
 
               </div>
 

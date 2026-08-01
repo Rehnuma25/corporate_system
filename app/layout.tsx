@@ -12,9 +12,17 @@ export default function RootLayout({
 }) {
   const pathname = usePathname();
 
+  // যেসব page-এ Sidebar/Navbar থাকবে না
+  const publicRoutes = [
+    "/",
+    "/login",
+    "/signup",
+    "/forgot-password",
+  ];
+
   const isPublicPage =
-    pathname === "/" ||
-    pathname === "/login";
+    publicRoutes.includes(pathname) ||
+    pathname.startsWith("/feature");
 
   return (
     <html lang="en">
@@ -28,7 +36,7 @@ export default function RootLayout({
             <div className="flex-1">
               <Navbar />
 
-              <main className="p-8 bg-[#ccffff] min-h-screen">
+              <main className="min-h-screen bg-[#ccffff] p-8">
                 {children}
               </main>
             </div>
