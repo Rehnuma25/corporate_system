@@ -1,3 +1,4 @@
+import ThemeToggle from "@/components/ThemeToggle";
 export default function Navbar() {
   return (
     <header className="h-16 bg-white border-b px-6 flex items-center justify-between">

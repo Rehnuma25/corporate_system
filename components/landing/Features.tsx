@@ -76,7 +76,8 @@ const features = [
 
 export default function Features() {
   return (
-    <section className="bg-blue-500 pt-24 pb-36">
+    <section className=" bg-gradient-to-r from-blue-600 to-blue-400 text-whitenpm run dev
+     pt-24 pb-36">
 
       <div className="max-w-7xl mx-auto px-6">
 

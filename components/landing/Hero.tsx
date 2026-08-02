@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="bg-gradient-to-br from-slate-50 via-pink-50 to-blue-50"
+      className="bg-gradient-to-br from-slate-50 via-white-50 to-blue-50"
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-24 lg:py-32">
 
@@ -21,22 +21,6 @@ export default function Hero() {
           {/* ================= Left Side ================= */}
 
           <div>
-
-            {/* Badge */}
-
-            <div className="inline-flex items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2">
-
-              <ShieldCheck
-                size={18}
-                className="text-blue-600"
-              />
-
-              <span className="text-sm font-medium text-blue-700">
-                Corporate Platform
-              </span>
-
-            </div>
-
             {/* Heading */}
 
             <h1 className="mt-8 text-5xl lg:text-7xl font-black leading-[0.9] text-slate-900">
@@ -56,7 +40,7 @@ export default function Hero() {
               Document Intelligence System helps 
               securely organize documents, retrieve knowledge
               instantly, automate workflows, and empower
-              employees with AI-driven decision support.
+              employees with decision support.
 
             </p>
 
@@ -75,7 +59,7 @@ export default function Hero() {
                 href="#features"
                 className="rounded-xl border border-slate-300 bg-white px-8 py-4 font-semibold text-slate-700 hover:border-blue-600 hover:text-blue-600 transition"
               >
-                Explore  Our Platform
+                Explore the Platform
               </a>
 
             </div>
@@ -124,9 +108,9 @@ export default function Hero() {
                            <div className="min-w-0">
 
                                  <h3 className="text-xl font-bold text-slate-900 whitespace-nowrap">
-                                                AI Assistant</h3>
+                                                 Assistant</h3>
                                       <p className="mt-2 text-base leading-7 text-slate-600">
-                                              Get instant answers from enterprise knowledge.</p>
+                                              Get instant answers from corporatee knowledge.</p>
 
                                             </div>
 
@@ -140,7 +124,7 @@ export default function Hero() {
 
           <div className="relative">
 
-            <div className="rounded-3xl border border-slate-200 bg-white shadow-2xl p-8">
+            <div className="rounded-3xl border border-blue-500 bg-gradient-to-br from-blue-400 to-blue-300 shadow-2xl p-8 backdrop-blur">
 
               {/* Header */}
 
@@ -152,7 +136,7 @@ export default function Hero() {
                     System Dashboard
                   </h3>
 
-                  <p className="text-slate-500 mt-1">
+                  <p className="text-black-500 mt-1">
                     Real-time Intelligence Platform Overview
                   </p>
 

@@ -40,7 +40,7 @@ const security = [
   },
   {
     title: "Secure Vector Database",
-    desc: "Enterprise ChromaDB with protected embeddings.",
+    desc: "Corporate ChromaDB with protected embeddings.",
     icon: DatabaseZap,
     color: "from-cyan-500 to-blue-700",
   },
@@ -48,23 +48,23 @@ const security = [
 
 export default function Security() {
   return (
-    <section className="py-24 bg-gradient-to-br from-slate-950 via-purple-950 to-slate-900 text-white">
+    <section className="py-24 bg-white text-slate-700">
 
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center">
 
-          <span className="px-5 py-2 rounded-full bg-blue-600">
-            Enterprise Security
+          <span className="px-5 py-2 rounded-full bg-blue-400">
+            System Security
           </span>
 
           <h2 className="mt-6 text-5xl font-bold">
             Security Comes First
           </h2>
 
-          <p className="mt-5 text-gray-300 max-w-3xl mx-auto">
-            Protect your  knowledge using modern authentication,
-            encryption, AI monitoring and advanced access control.
+          <p className="mt-8 text-white-700 max-w-3xl mx-auto">
+            Protect knowledge using modern authentication,
+            encryption,monitoring and advanced access control.
           </p>
 
         </div>
@@ -91,7 +91,7 @@ export default function Security() {
 
                 </div>
 
-                <h3 className="text-2xl font-bold">
+                <h3 className="mt-6 text-2xl font-bold text-white">
 
                   {item.title}
 

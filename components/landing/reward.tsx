@@ -5,7 +5,7 @@ import { Gift, Trophy, Coins, ArrowRight } from "lucide-react";
 
 export default function reward() {
   return (
-    <section className="relative overflow-hidden py-28 bg-gradient-to-br from-indigo-950 via-blue-900 to-cyan-900 text-white">
+    <section className="relative overflow-hidden py-28 bg-gradient-to-br from-indigo-750 via-blue-700 to-cyan-700 text-white">
 
       {/* Background Blur */}
 
@@ -21,15 +21,9 @@ export default function reward() {
 
           <div>
 
-            <span className="px-5 py-2 rounded-full bg-white/10 border border-white/20 text-cyan-300">
-
-              Intelligence Rewards Program
-
-            </span>
-
             <h2 className="mt-8 text-6xl font-extrabold leading-tight">
 
-              Earn AI Credits
+              Earn Intelligence Credits
 
               <br />
 
@@ -64,7 +58,7 @@ export default function reward() {
 
                   <p className="mt-2 text-slate-300">
 
-                    Full access to AI Chat, Voice,
+                    Full access to  Chat, Voice,
                     Images, PDF Analysis and RAG Search.
 
                   </p>

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-slate-950 text-gray-300">
+    <footer className="bg-black-150 text-gray-300">
 
       <div className="max-w-7xl mx-auto px-6 py-20">
 
@@ -14,27 +14,23 @@ export default function Footer() {
 
             <div className="flex items-top gap-3">
 
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 flex items-center justify-center text-white font-bold">
-                DIS
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-blue-400 flex items-center justify-center text-white font-bold">
+                CDIS
               </div>
 
               <div>
 
                 <h2 className="text-white text-xl font-bold">
-                  Document Intelligence System
+                  Corporate Document Intelligence System
                 </h2>
-
-                <p className="text-sm text-gray-400">
-                  Corporate Management Platform
-                </p>
 
               </div>
 
             </div>
 
             <p className="mt-6 leading-7 text-gray-400">
-               AI-powered Corporate document intelligence platform
-              with RAG, ChromaDB, Voice AI and Image Understanding.
+              Corporate document intelligence platform
+              with RAG, ChromaDB, Voice  and Image Understanding.
             </p>
 
           </div>
@@ -49,11 +45,11 @@ export default function Footer() {
 
             <ul className="space-y-3">
 
-              <li><Link href="/">AI Workspace</Link></li>
+              <li><Link href="/">Intelligence Workspace</Link></li>
 
               <li><Link href="/">Knowledge Base</Link></li>
 
-              <li><Link href="/">Analytics</Link></li>
+              <li><Link href="/">Features</Link></li>
 
               <li><Link href="/">Security</Link></li>
 
@@ -121,7 +117,7 @@ export default function Footer() {
 
             <div className="mt-6">
 
-              <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+              <button className="px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-blue-400 text-white">
                 Get Started
               </button>
 
